@@ -27,15 +27,6 @@ The work was completed as part of a practical data mining assignment and uses cl
 
 ---
 
-## 🎯 Objectives
-
-- Clean and preprocess transactional data for basket analysis
-- Identify frequent itemsets using **Apriori algorithm**
-- Generate association rules based on **support, confidence, and lift**
-- Interpret results to make retail strategy suggestions
-
----
-
 ## 🧰 Tools & Libraries
 
 - **Languages**: Python  
