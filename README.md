@@ -1,6 +1,6 @@
 # 🛍️ Market Basket Analysis on Online Retail Data
 
-This project applies **association rule mining** to online retail transaction data to uncover patterns in customer purchasing behavior. It uses **Apriori-based market basket analysis** to identify frequently co-purchased items and generate actionable insights about product affinity.
+This project performs Market Basket Analysis on retail transaction data using association rule mining with the **Apriori algorithm**. The aim is to uncover patterns and relationships between items frequently purchased together, which can inform marketing strategies, product placement, and inventory management.
 
 The analysis was conducted using Python and the `mlxtend` library, based on a real-world dataset of over 500,000 transactions from an online retailer.
 
@@ -38,33 +38,38 @@ The work was completed as part of a practical data mining assignment and uses cl
 
 ## 🧰 Tools & Libraries
 
-- **Python**
-- `pandas`, `numpy`
-- `mlxtend` for association rules
-- `matplotlib`, `seaborn` for plotting
-- `openpyxl` for Excel import
+- **Languages**: Python  
+- **Libraries**:  
+  - `pandas` – data manipulation  
+  - `mlxtend` – Apriori algorithm and rule generation  
+  - `matplotlib`, `seaborn` – data visualization 
 
 ---
 
-## 🔍 Methodology
+## 🧪 Methodology
 
-1. **Data Preprocessing**
-   - Removed cancelled orders and negative quantities
-   - Filtered transactions to UK-based customers
-   - Created a **binary basket matrix** using pivoting
+### 1. Data Preprocessing
+- Loaded and cleaned the transaction data.
+- Removed invalid or canceled transactions.
+- Transformed the data into a one-hot encoded format suitable for the Apriori algorithm.
 
-2. **Frequent Itemset Mining**
-   - Used **Apriori algorithm** to extract itemsets above minimum support threshold
+### 2. Frequent Itemset Mining
+- Applied the **Apriori algorithm** to find frequent itemsets.
+- Set a minimum support threshold to filter out infrequent combinations.
 
-3. **Association Rules Generation**
-   - Derived rules using `mlxtend.frequent_patterns.association_rules()`
-   - Evaluated rules based on confidence and lift
-   - Sorted and visualised top rules for business interpretation
+### 3. Rule Generation
+- Generated association rules using the frequent itemsets.
+- Filtered rules based on meaningful **confidence** and **lift** thresholds.
+
+### 4. Visualization & Interpretation
+- Visualized key rules and metrics.
+- Interpreted item relationships and actionable insights.
 
 ---
 
 ## 📊 Key Findings
 
-- Items like **“white hanging heart”**, **“regency cake stand”**, and **“jam making sets”** were frequently purchased together
-- High-confidence rules (above 80%) were found in home décor and kitchen accessories
-- Lift values > 3 indicate strong product affinity, useful for upselling or cross-promotion strategies
+- Found strong associations such as:
+  > Customers who buy **"ALARM CLOCK BAKELIKE RED"** also tend to buy **"ALARM CLOCK BAKELIKE GREEN"** – with high confidence and lift.
+- Identified potential product bundles ideal for promotions.
+- Demonstrated how association rule mining can support strategic retail decisions (e.g., cross-selling, store layout planning).
